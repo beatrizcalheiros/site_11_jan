@@ -1,0 +1,492 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* TOP NAV */
+/*-- tentar transformar h1 e h2 num só para o float acontecer direito funcionou */
+.container {
+  width: 100%;
+  float: left;
+  margin-right: 0;
+  clear: right;
+  margin-bottom: 13%;
+  /* makes the bar move from right to left position: absolute;*/
+}
+
+.container h1 {
+  border-top: none;
+  padding-left: 42%;
+  padding-right: 10%;
+  padding-top: 5%;
+  padding-bottom: 0.5%;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bolder;
+  font-size: 20pt;
+}
+
+.container h2 {
+  border-top: none;
+  padding-left: 9%;
+  padding-top: 1%;
+  padding-bottom: 2%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16pt;
+}
+
+.container img {
+  width: 67%;
+  position: absolute;
+  left: 50px;
+  top: 70px;
+  padding-bottom: 0.5%;
+}
+
+.container #burger img {
+  width: 3%;
+  left: 90%;
+  top: 10%;
+  position: absolute;
+}
+
+.container #logo img {
+  width: 4%;
+  position: absolute;
+  left: 50px;
+  top: 60px;
+}
+
+.container a:link {
+  text-decoration: none;
+}
+
+.container a:visited {
+  text-decoration: none;
+}
+
+tr {
+  font-family: "Open Sans", sans-serif;
+}
+
+@media only screen and (max-width: 500px), only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .container {
+    margin-bottom: 8%;
+    /* makes the bar move from right to left position: absolute;*/
+  }
+  .container h1 {
+    padding-left: 16%;
+    padding-top: 13%;
+    padding-bottom: 0.5%;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bolder;
+    font-size: 14pt;
+  }
+  .container #burger img {
+    width: 8%;
+    left: 85%;
+    top: 6.5%;
+    position: absolute;
+  }
+  .container #logo img {
+    width: 7%;
+    position: absolute;
+    left: 22px;
+    top: 45px;
+  }
+}
+
+/*border para resolver o problema da border que flutuava*/
+#top, #bottom, #left, #right {
+  background: black;
+  position: fixed;
+}
+
+#left, #right {
+  top: 0;
+  bottom: 0;
+  width: 8px;
+}
+
+#left {
+  left: 0;
+}
+
+#right {
+  right: 0;
+}
+
+#top, #bottom {
+  left: 0;
+  right: 0;
+  height: 8px;
+}
+
+#top {
+  top: 0;
+}
+
+#bottom {
+  bottom: 0;
+}
+
+/*responsive border 1st small phone -- 2s ipad*/
+@media only screen and (max-width: 500px), only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  #top, #bottom, #left, #right {
+    display: none;
+  }
+}
+
+body {
+  height: 100vh;
+}
+
+.container img {
+  width: 67%;
+  position: absolute;
+  left: 50px;
+  top: 70px;
+  padding-bottom: 0.5%;
+}
+
+.mobs img {
+  visibility: hidden;
+  width: 67%;
+  position: absolute;
+  left: 50px;
+  top: 70px;
+  padding-bottom: 0.5%;
+}
+
+/*slideshow*/
+.slideshow-container {
+  width: 62%;
+  margin-left: 1%;
+  margin-right: 0;
+  clear: right;
+}
+
+.slideshow-container img {
+  padding-top: 6em;
+}
+
+#ponto {
+  position: absolute;
+  left: 27%;
+  width: 60%;
+  padding-top: 1.5%;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 1%;
+  background-color: #000;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* menu do lado com eventos futuros deve estar ao lado da imagem  */
+.container3 {
+  position: absolute;
+  width: 36%;
+  height: 63%;
+  top: 30%;
+  left: 62.5%;
+}
+
+.container3 nav {
+  padding-top: 4%;
+  padding-bottom: 4%;
+  border-right: none;
+}
+
+.container3 nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container3 nav li h3 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18pt;
+  padding-left: 10%;
+}
+
+.container3 nav img {
+  width: 45%;
+  padding-left: 20%;
+  margin-left: 3%;
+  margin-top: 3%;
+}
+
+.next {
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: black;
+  font-weight: bold;
+  font-size: 24px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  position: absolute;
+  right: 14%;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: rgba(190, 190, 190, 0.9);
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 20%;
+  width: 100%;
+}
+
+.overlay a {
+  padding: 10px;
+  text-decoration: none;
+  font-size: 30px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+  margin: 10px;
+}
+
+.flex_container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-content: center;
+  justify-content: flex-start;
+}
+
+.menu_title {
+  font-weight: bolder;
+}
+
+.ul_menu {
+  align-items: flex-start;
+  font-family: "Open Sans", sans-serif;
+}
+
+.li_menu {
+  margin: 20px;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  z-index: 9999999;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {
+    overflow-y: auto;
+  }
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+@media only screen and (max-width: 500px), only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .container img {
+    visibility: hidden;
+    top: 25px;
+    left: 20px;
+    width: 70%;
+  }
+  .container #burger img {
+    visibility: visible;
+    left: 85%;
+    top: 4.5%;
+    width: 6%;
+  }
+  .mobs img {
+    visibility: visible;
+    width: 45%;
+    position: absolute;
+    left: 20px;
+    top: 30px;
+    padding-bottom: 0.5%;
+  }
+  .slideshow-container {
+    width: 100%;
+    margin-left: 0%;
+  }
+  #ponto {
+    left: 45%;
+  }
+  .dot {
+    height: 8px;
+    width: 8px;
+  }
+  .container3 {
+    top: 60%;
+    left: 30%;
+    width: 60%;
+  }
+  .container3 nav li h3 {
+    font-size: 10pt;
+  }
+  .container3 nav img {
+    width: 60%;
+    padding: 6%;
+  }
+  .next {
+    right: 0;
+    top: 42%;
+  }
+  .overlay-content {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0%;
+    width: 100%;
+  }
+  .overlay a {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+    margin: 10px;
+  }
+  .flex_container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    justify-content: flex-start;
+  }
+  .menu_title {
+    font-weight: bolder;
+  }
+  .ul_menu {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    font-family: "Open Sans", sans-serif;
+  }
+  .li_menu {
+    margin: 0px;
+  }
+}

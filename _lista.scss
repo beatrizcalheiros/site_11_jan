@@ -1,0 +1,64 @@
+
+.curso{
+  top: 15%;
+  width: 20%;
+  position: absolute;
+  left: 12%;
+
+
+  h3{
+    margin-top: 50%;
+    font-family: $font-stack;
+    font-weight: 500;
+    font-size: 16pt;
+    padding-bottom: 5%;
+    line-height: normal;
+  }
+
+  img{
+    width: 90%;
+    padding-top: 10%;
+    padding-bottom: 20%;
+  }
+
+  p{
+    font-family:$font-stack;
+    font-size: 9pt;
+    text-align: left;
+    line-height: 15pt;
+    font-weight: normal;
+
+  }
+}
+
+.curso1{
+  @extend .curso;
+  float: right;
+  left: 40%;
+
+}
+
+.curso2{
+  @extend .curso;
+  float: right;
+  left: 68%;
+}
+
+
+a:link{
+  text-decoration: none;
+  color: inherit;
+
+}
+
+a:visited{
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+
+
+/* media queries -- responsivo */

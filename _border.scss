@@ -1,0 +1,28 @@
+
+/*border para resolver o problema da border que flutuava*/
+#top, #bottom, #left, #right {
+	background: black;
+	position: fixed;
+
+	}
+	#left, #right {
+		top: 0; bottom: 0;
+		width: 8px;
+		}
+		#left { left: 0; }
+		#right { right: 0; }
+
+	#top, #bottom {
+		left: 0; right: 0;
+		height: 8px;
+		}
+		#top { top: 0; }
+		#bottom { bottom: 0; }
+
+  /*responsive border 1st small phone -- 2s ipad*/
+    @media
+    only screen and (max-width: 500px),
+    only screen and (min-device-width: 768px) and (max-device-width: 1024px)
+    {
+    	#top, #bottom, #left, #right { display: none; }
+    }

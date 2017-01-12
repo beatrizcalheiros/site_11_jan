@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+
+ <html lang="en">
+ <style>
+
+</style>
+  <head>
+      <title>FBAUP</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+              <link rel="stylesheet" type="text/css" href="index.css"/>
+              <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+
+
+</head>
+
+  <body>
+  <div id="left"></div>
+  <div id="right"></div>
+  <div id="top"></div>
+  <div id="bottom"></div>
+
+  <div id="myNav" class="overlay">
+
+  <!-- Button to close the overlay navigation -->
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+  <!-- Overlay content -->
+  <div class="overlay-content">
+    <div class="flex_container">
+          <ul class="ul_menu">
+          <li class="li_menu"><a class="menu_title">Instituição</a></li>
+          <li class="li_menu"><a href="index.html">Início</a></li>
+          <li class="li_menu"><a href="apresentacao.html">Apresentação</a></li>
+          <li class="li_menu"><a href="contactos.html">Contactos</a></li>
+          <li class="li_menu"><a href="evento.html">Eventos</a></li>
+          </ul>
+
+          <ul class="ul_menu">
+          <li class="li_menu"><a class="menu_title">Cursos</a></li>
+          <li class="li_menu"><a href="licenciaturas.html">Licenciaturas</a></li>
+          <li class="li_menu"><a href="mestrados.html" >Mestrados</a></li>
+          <li class="li_menu"><a href="doutoramentos.html">Doutoramentos</a></li>
+          <li class="li_menu"><a href="https://fbaupformacaocontinua.wordpress.com/"/>Formação Contínua</a></li>
+        </ul>
+  </div>
+  </div>
+
+</div>
+
+    <header>
+        <div class="container">
+          <a href="index.html">
+      <img src="logo2.png" alt="logo"/></a>
+      <div class="mobs">
+      <img src="mobilelogo.png" alt="logo"/></a>
+    </div>
+
+
+
+        <p id="burger" onclick="openNav()"><a href="#s1">
+        <img src="burger.png" alt= "menu"/></a>
+      </p>
+    </div>
+    </header>
+
+
+<div class="slideshow-container-events">
+    <div class="container3 fade">
+      <nav>
+        <ul>
+          <li><h3>05/12</h3><img src="eve1.jpg" alt="evento"/></li>
+          <li><h3>06/01</h3><img src="eve2.jpg" alt="evento"/></li>
+          <li><h3>13/01</h3><img src="eve3.jpg" alt="evento"/></li>
+        </ul>
+
+
+  <a class="next" onclick="plusSlides(1, 'container3', 'next');"><span>❯</span></a>
+      </nav>
+    </div>
+
+	<div class="container3 fade" style="display:none">
+      <nav>
+        <ul>
+          <li><h3>06/01</h3><img src="eve3.jpg" alt="evento"/></li>
+          <li><h3>06/01</h3><img src="eve5.jpg" alt="evento"/></li>
+          <li><h3>13/01</h3><img src="eve6.jpg" alt="evento"/></li>
+        </ul>
+
+    <a class="next" onclick="plusSlides(1, 'container3', 'next');"><span>❯</span></a>
+
+
+      </nav>
+
+</div>
+<!-- fim cabeçalho inicio eventos -->
+
+<div class="slideshow-container">
+<div class="mySlides fade">
+  <a href="evento.html"><img src="evento1.jpg" style="width:100%"> </a>
+</div>
+
+
+<div class="mySlides fade">
+  <a href="evento.html"><img src="cinemundo.jpg" style="width:100%"></a>
+</div>
+
+
+<div class="mySlides fade">
+  <a href="evento.html"><img src="arranque.jpg" style="width:100%"></a>
+</div>
+
+</div>
+
+<!--botoes de hover transition-->
+<div class="slideshow-container" id="ponto">
+  <span class="dot" onclick="currentSlide(1, 'mySlides', 'dot');"></span>
+  <span class="dot" onclick="currentSlide(2, 'mySlides', 'dot');"></span>
+  <span class="dot" onclick="currentSlide(3, 'mySlides', 'dot');"></span>
+</div>
+
+
+
+
+
+<!--js -->
+<script src="index2.js"></script>
+
+
+
+
+</div>
+</body>
+</html>
