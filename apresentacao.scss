@@ -129,8 +129,10 @@ ul{
 
 li{
   font-family: $font-stack;
+	font-size: 16pt;
   display: inline-block;
-  padding-left: 2em;
+  padding-left: 2.5em;
+	padding-top: 0.5em;
 
 }
 
@@ -223,7 +225,7 @@ li a:hover{
       margin: 0px;
   }
 
-}
+
 
 
 footer {
@@ -264,4 +266,5 @@ li a:hover{
   text-decoration: line-through;
 }
 
+}
 }

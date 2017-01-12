@@ -306,8 +306,10 @@ footer ul {
 
 footer li {
   font-family: "Open Sans", sans-serif;
+  font-size: 16pt;
   display: inline-block;
-  padding-left: 2em;
+  padding-left: 2.5em;
+  padding-top: 0.5em;
 }
 
 footer li a:link, footer a:visited {
@@ -380,43 +382,38 @@ footer li a:hover {
   li {
     margin: 0px;
   }
-}
-
-footer {
-  text-align: center;
-  background-color: grey;
-  opacity: 0.8;
-  position: absolute;
-  top: 21%;
-  right: 0;
-  left: 0.5%;
-  bottom: 0;
-  width: 99%;
-  height: 12%;
-  text-align: left;
-}
-
-footer ul {
-  display: inline-block;
-  width: 80%;
-  text-align: center;
-  padding-left: 10%;
-  padding-top: 3%;
-}
-
-footer li {
-  font-family: "Open Sans", sans-serif;
-  display: inline-block;
-  text-align: center;
-  padding: 2.5%;
-  font-size: 10pt;
-}
-
-footer li a:link, footer a:visited {
-  color: white;
-  text-decoration: none;
-}
-
-footer li a:hover {
-  text-decoration: line-through;
+  footer {
+    text-align: center;
+    background-color: grey;
+    opacity: 0.8;
+    position: absolute;
+    top: 21%;
+    right: 0;
+    left: 0.5%;
+    bottom: 0;
+    width: 99%;
+    height: 12%;
+    text-align: left;
+  }
+  footer ul {
+    display: inline-block;
+    width: 80%;
+    text-align: center;
+    padding-left: 10%;
+    padding-top: 3%;
+  }
+  footer li {
+    font-family: "Open Sans", sans-serif;
+    display: inline-block;
+    text-align: center;
+    padding: 2.5%;
+    font-size: 10pt;
+  }
+  footer li a:link, footer a:visited {
+    color: white;
+    text-decoration: none;
+  }
+  footer li a:hover {
+    text-decoration: line-through;
+  }
 }
